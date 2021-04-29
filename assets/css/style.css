@@ -1,0 +1,11 @@
+.header {
+    background-color: rgb(65, 62, 62);
+    text-align: center;
+    height: 100px;
+}
+
+.header-title {
+    position: relative;
+    top: 30%;
+    color: blanchedalmond;
+}
