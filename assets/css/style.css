@@ -9,3 +9,65 @@
     top: 30%;
     color: blanchedalmond;
 }
+
+.float-left { 
+    background-color: rgb(202, 199, 199);
+    float: left;
+    height: 600px;
+    width: 350px;
+}
+
+.float-right {
+
+    float: right;
+    height: 600px;
+    width: 1500px;
+    /* border: 3px solid black; */
+    align-items: center;
+}
+
+/* .cards-container { 
+    display: flex;
+    justify-content: space-between;
+} */
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: right;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+ .inside-card {
+     border: 2px solid black;
+     padding: 10px;
+     margin: 10px;
+ }
+
+ /* .cards-between {
+     padding: 50px;
+ } */
