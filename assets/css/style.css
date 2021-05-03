@@ -10,21 +10,21 @@
     color: blanchedalmond;
 }
 
-.float-left { 
+.float-left {
     background-color: rgb(202, 199, 199);
     float: left;
     height: 600px;
-    width: 350px;
+    width: 300px;
 }
 
-.float-right {
 
+/* .float-right {
     float: right;
     height: 600px;
-    width: 1500px;
-    /* border: 3px solid black; */
+    width: auto;
     align-items: center;
-}
+} */
+
 
 /* .cards-container { 
     display: flex;
@@ -38,9 +38,9 @@ form.example input[type=text] {
     float: left;
     width: 80%;
     background: #f1f1f1;
-  }
-  
-  form.example button {
+}
+
+form.example button {
     float: right;
     width: 20%;
     padding: 10px;
@@ -50,24 +50,50 @@ form.example input[type=text] {
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
-  }
-  
-  form.example button:hover {
+}
+
+form.example button:hover {
     background: #0b7dda;
-  }
-  
-  form.example::after {
+}
+
+form.example::after {
     content: "";
     clear: both;
     display: table;
-  }
+}
 
- .inside-card {
-     border: 2px solid black;
-     padding: 10px;
-     margin: 10px;
- }
+.inside-card {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 9px;
+}
 
- /* .cards-between {
-     padding: 50px;
- } */
+.cards-container {
+    margin-left: 120px;
+}
+
+.card {
+    height: 300px;
+    width: auto;
+}
+
+.success {
+    background-color: rgb(27, 199, 27);
+    width: fit-content;
+}
+
+.warning {
+    background-color: orange;
+    width: fit-content;
+}
+
+.danger {
+    background-color: red;
+    width: fit-content;
+}
+
+
+/* 
+.card-body {
+    background-color: aquamarine;
+} */

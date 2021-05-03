@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,62 +12,75 @@
 </head>
 
 <header>
-   <section class="header">
-    <h2 class="header-title">WEATHER DASHBOARD</h2>
-   </section>
+    <section class="header">
+        <h2 class="header-title">WEATHER DASHBOARD</h2>
+    </section>
 </header>
+
 <body>
     <section class="float-left">
         <h2 class="search-title">Search for a City:</h2>
         <form class="example" style="max-width:200px">
-            <input type="text" placeholder="Search..">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
+            <input type="text" placeholder="Search.." id="Search-box">
+            <button id="Search-Button"><i class="fa fa-search"></i></button>
+        </form>
     </section>
 
-    <!-- <section class="float-right">
-        <div class="cards-container">
-            
-        </div>
-        
-    </section> -->
+    <section>
+        <div class="card">
+            <div class="card-body">
+                <h2 class="CityDate"> Date Icon</h2> <img class="IconCurrent">
+                <br>
+                <p class="current-temp">Temperature</p>
+                <p class="current-humidity">Humidity</p>
+                <p class="current-wind">WindSpeed</p>
+                <p id="current-UV">UV Index:</p>
+            </div>
+
+    </section>
 
     <section class="container my-5">
-        <div class="row cards-between">
-            <div class="col-lg-1"></div>
-            <div class="col-12 col-md-6 col-lg-2 inside-card">
-            <h3>DATE 1</h3>
-            <img id="current-pic" alt="WEATHER GRAPHIC">
-            <p>Temperature</p>
-            <p>Humidity</p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-2 inside-card">
-            <h3>DATE 2</h3>
-            <img id="current-pic" alt="WEATHER GRAPHIC">
-            <p>Temperature</p>
-            <p>Humidity</p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-2 inside-card">
-            <h3>DATE 2</h3>
-            <img id="current-pic" alt="WEATHER GRAPHIC">
-            <p>Temperature</p>
-            <p>Humidity</p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-2 inside-card">
-            <h3>DATE 2</h3>
-            <img id="current-pic" alt="WEATHER GRAPHIC">
-            <p>Temperature</p>
-            <p>Humidity</p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-2 inside-card">
-            <h3>DATE 2</h3>
-            <img id="current-pic" alt="WEATHER GRAPHIC">
-            <p>Temperature</p>
-            <p>Humidity</p>
-          </div>
-    </div>    
-    </section>  
 
+        <div class="row">
+
+            <div class="col-lg-1"></div>
+            <h2>5 Day Forecast</h2>
+            <div class="col-12 col-md-6 col-lg-2 inside-card">
+                <h3 class="date-5">DATE 1</h3>
+                <img class="icon" id="current-pic" alt="WEATHER GRAPHIC">
+                <p class="Temperature">Temperature</p>
+                <p class="Humidity">Humidity</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-2 inside-card">
+                <h3 class="date-5">DATE 2</h3>
+                <img class="icon" id="current-pic" alt="WEATHER GRAPHIC">
+                <p class="Temperature">Temperature</p>
+                <p class="Humidity">Humidity</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-2 inside-card">
+                <h3 class="date-5">DATE 2</h3>
+                <img class="icon" id="current-pic" alt="WEATHER GRAPHIC">
+                <p class="Temperature">Temperature</p>
+                <p class="Humidity">Humidity</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-2 inside-card">
+                <h3 class="date-5">DATE 2</h3>
+                <img class="icon" id="current-pic" alt="WEATHER GRAPHIC">
+                <p class="Temperature">Temperature</p>
+                <p class="Humidity">Humidity</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-2 inside-card">
+                <h3 class="date-5">DATE 2</h3>
+                <img class="icon" id="current-pic" alt="WEATHER GRAPHIC">
+                <p class="Temperature">Temperature</p>
+                <p class="Humidity">Humidity</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
