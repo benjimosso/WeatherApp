@@ -55,7 +55,7 @@ function getAPI(lat, lon) {
     CardMain.style.display = 'inline-block'
 
 }
-
+// Five Day function, retreives the 5 day forecast.
 function FiveDay(data) {
     var IconClass = $('.icon')
     var Temp = $('.Temperature')
@@ -82,7 +82,7 @@ function FiveDay(data) {
     })
 
 }
-
+// Current day function, retreves today's data
 function currentDay(data, city) {
     var CityDate = $('.CityDate')
     var currentTemp = $('.current-temp')
@@ -96,7 +96,7 @@ function currentDay(data, city) {
     $('.IconCurrent').attr('src', iconURL)
 
 
-    CityDate[0].innerText = city + ' ' + dateString
+    CityDate[0].innerText = city.toUpperCase() + ' ' + dateString
     currentTemp[0].innerText = 'Temperature: ' + data.current.temp + ' F°';
     CurrentHum[0].innerText = 'Humidity: ' + data.current.humidity + ' %'
     CurrentWind[0].innerText = 'Wind Speed: ' + data.current.wind_speed + ' MPH'
