@@ -63,7 +63,7 @@ function FiveDay(data) {
     var Dates = $('.date-5')
 
     $(IconClass).each(function(i) {
-        var iconurl = "http://openweathermap.org/img/w/" + data.daily[i].weather[0].icon + ".png";
+        var iconurl = "https://openweathermap.org/img/w/" + data.daily[i].weather[0].icon + ".png";
         $(this).attr('src', iconurl)
     });
     $(Temp).each(function(i) {
@@ -92,7 +92,7 @@ function currentDay(data, city) {
 
     var dateString = moment.unix(data.current.dt).format("MM/DD/YYYY");
 
-    var iconURL = "http://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png"
+    var iconURL = "https://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png"
     $('.IconCurrent').attr('src', iconURL)
 
 
