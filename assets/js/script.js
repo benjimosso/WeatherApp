@@ -104,10 +104,16 @@ function currentDay(data, city) {
 
     if (data.current.uvi < 5) {
         $(CurrentUV).addClass("success");
+        $(CurrentUV).removeClass("warning");
+        $(CurrentUV).removeClass("danger");
     } else if (data.current.uvi < 7) {
         $(CurrentUV).addClass("warning");
+        $(CurrentUV).removeClass("success");
+        $(CurrentUV).removeClass("danger");
     } else {
         $(CurrentUV).addClass("danger");
+        $(CurrentUV).removeClass("warning");
+        $(CurrentUV).removeClass("success");
     }
 
     CurrentUV[0].innerText = 'UV Index: ' + data.current.uvi
