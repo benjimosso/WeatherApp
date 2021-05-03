@@ -31,10 +31,10 @@ SearchButton.addEventListener('click', function(event) {
 // get API OpenWeather
 function getAPI(lat, lon) {
     city = InputText.value
-    var APiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${ApiKey}`
+    var APiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${ApiKey}`
 
 
-    var OneCallAPI = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${ApiKey}`
+    var OneCallAPI = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${ApiKey}`
 
 
     fetch(OneCallAPI)
