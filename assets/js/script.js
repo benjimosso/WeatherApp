@@ -2,12 +2,16 @@
 SearchButton = document.getElementById('Search-Button')
 var ApiKey = '77b370b5644211bf342dd0e9469a0daf';
 var InputText = document.getElementById('Search-box')
+var CardMain = document.querySelector('#card')
+var CardFiveDay = document.querySelector('#container')
+var Welcome = document.querySelector('.Welcome')
+
+CardFiveDay.style.display = 'none'
+CardMain.style.display = 'none'
 
 SearchButton.addEventListener('click', function(event) {
     event.preventDefault()
-        //console.log(InputText.value)
-
-    // get API For Longitud And Latitude
+        // get API For Longitud And Latitude
     city = InputText.value
     var APIGeoCodeUrl = `https://api.opencagedata.com/geocode/v1/json?q=${city}&key=afe07db0fcd7497f94e6af637a912ef0`;
     fetch(APIGeoCodeUrl)
@@ -21,17 +25,12 @@ SearchButton.addEventListener('click', function(event) {
                 })
             }
         })
-        //return;
+    Welcome.style.display = 'none'
 })
 
 // get API OpenWeather
 function getAPI(lat, lon) {
-
-    // console.log(lat)
-    // console.log(lon)
-
     city = InputText.value
-        //console.log(city)
     var APiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${ApiKey}`
 
 
@@ -41,9 +40,7 @@ function getAPI(lat, lon) {
     fetch(OneCallAPI)
         .then(function(response) {
             if (response.ok) {
-                //console.log(response)
                 response.json().then(function(data) {
-                    // console.log(data);
                     FiveDay(data)
                     currentDay(data, city)
 
@@ -53,43 +50,30 @@ function getAPI(lat, lon) {
             }
 
         })
+
+    CardFiveDay.style.display = 'flex'
+    CardMain.style.display = 'inline-block'
+
 }
 
-
-
-// function NarrowDown(data) {
-//     // console.log(data.list)
-//     var Datalist = data.list
-
-//     for (let i = 0; i < Datalist.length; i += 8) {
-//         //console.log(Datalist[i])
-//         FiveDay.push(Datalist[i])
-//     }
-//     test(FiveDay)
-// }
-
-// var FiveDay = []
-
 function FiveDay(data) {
-    // console.log(FiveDay)
     var IconClass = $('.icon')
     var Temp = $('.Temperature')
     var Humidity = $('.Humidity')
     var Dates = $('.date-5')
-        // FiveDay.forEach(element => {
+
     $(IconClass).each(function(i) {
         var iconurl = "http://openweathermap.org/img/w/" + data.daily[i].weather[0].icon + ".png";
         $(this).attr('src', iconurl)
-            //console.log(this)
     });
     $(Temp).each(function(i) {
-        //console.log(FiveDay)
-        this.innerText = data.daily[i].temp.day + ' F°'
+
+        this.innerText = 'Temperature: ' + data.daily[i].temp.day + ' F°'
         console.log(this)
     })
 
     $(Humidity).each(function(i) {
-        this.innerText = data.daily[i].humidity + ' %'
+        this.innerText = 'Humidity: ' + data.daily[i].humidity + ' %'
     })
 
     $(Dates).each(function(i) {
